@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonCord</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div id="login">
+    <h2>Gentio</h2>
+    <input id="nick" placeholder="Seu nick">
+    <button onclick="login()">Entrar</button>
+</div>
+
+<div id="app" style="display:none;">
+
+    <div id="sidebar">
+        <h3>Servidores</h3>
+        <div id="listaServidores"></div>
+        <input id="serverNome" placeholder="Novo servidor">
+        <button onclick="criarServidor()">Criar</button>
+    </div>
+
+    <div id="main">
+        <div id="chat"></div>
+
+        <div id="bottomBar">
+            <input id="mensagem" placeholder="Mensagem">
+            <button onclick="enviarMensagem()">➤</button>
+        </div>
+
+        <div>
+            <input id="amigo" placeholder="Adicionar amigo">
+            <button onclick="enviarPedido()">Enviar pedido</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>
